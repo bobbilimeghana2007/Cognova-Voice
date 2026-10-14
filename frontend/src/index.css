@@ -1,0 +1,121 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg-sanctuary: #FAF7F0;
+    --bg-cream: #FFFDF7;
+    --text-forest: #153B32;
+    --text-muted: #61736D;
+    --primary-emerald: #07866B;
+    --secondary-teal: #18A999;
+    --accent-mint: #B8F2D0;
+    --highlight-gold: #F4B942;
+    --warning-coral: #F28B82;
+  }
+
+  body {
+    background-color: var(--bg-sanctuary);
+    /* Soft ambient library sanctuary gradient: warm morning sunlight + lush emerald undertone */
+    background-image: 
+      radial-gradient(circle at 10% 12%, rgba(244, 185, 66, 0.12) 0%, transparent 40%),
+      radial-gradient(circle at 90% 15%, rgba(7, 134, 107, 0.09) 0%, transparent 45%),
+      radial-gradient(circle at 50% 85%, rgba(24, 169, 153, 0.08) 0%, transparent 50%),
+      linear-gradient(rgba(7, 134, 107, 0.02) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(7, 134, 107, 0.02) 1px, transparent 1px);
+    background-size: 100% 100%, 100% 100%, 100% 100%, 48px 48px, 48px 48px;
+    background-attachment: fixed;
+    color: var(--text-forest);
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Outfit', 'Inter', sans-serif;
+    color: var(--text-forest);
+    letter-spacing: -0.02em;
+  }
+}
+
+@layer components {
+  /* Premium Glassmorphic Surfaces (Bright Study Sanctuary) */
+  .glass-sanctuary {
+    background: rgba(255, 255, 255, 0.88);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(7, 134, 107, 0.14);
+    box-shadow: 0 10px 30px -5px rgba(21, 59, 50, 0.06), 0 2px 8px -2px rgba(21, 59, 50, 0.03);
+  }
+
+  .glass-sanctuary-hover {
+    transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .glass-sanctuary-hover:hover {
+    background: rgba(255, 255, 255, 0.96);
+    border-color: rgba(7, 134, 107, 0.32);
+    transform: translateY(-3px);
+    box-shadow: 0 18px 40px -6px rgba(7, 134, 107, 0.12), 0 6px 14px -3px rgba(21, 59, 50, 0.05);
+  }
+
+  /* Warm Gold Glass Accent */
+  .glass-gold {
+    background: rgba(254, 248, 235, 0.85);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(244, 185, 66, 0.30);
+    box-shadow: 0 8px 24px -4px rgba(244, 185, 66, 0.12);
+  }
+
+  /* Mint/Emerald Glass Pill */
+  .glass-mint {
+    background: rgba(230, 250, 240, 0.85);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(7, 134, 107, 0.20);
+  }
+
+  .glass-pill {
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(7, 134, 107, 0.12);
+  }
+
+  .sanctuary-input {
+    background: #FFFFFF;
+    border: 1px solid rgba(7, 134, 107, 0.20);
+    color: var(--text-forest);
+    transition: all 0.2s ease;
+  }
+  .sanctuary-input:focus {
+    border-color: var(--primary-emerald);
+    box-shadow: 0 0 0 3px rgba(7, 134, 107, 0.15);
+    outline: none;
+  }
+
+  /* Gradient Textures */
+  .gradient-emerald-gold {
+    background: linear-gradient(135deg, #07866B 0%, #18A999 50%, #D99616 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .gradient-hero-title {
+    background: linear-gradient(135deg, #0E2922 0%, #07866B 55%, #B77F14 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  /* Custom Clean Scrollbars */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: rgba(245, 239, 235, 0.6);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgba(7, 134, 107, 0.25);
+    border-radius: 9999px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(7, 134, 107, 0.5);
+  }
+}
